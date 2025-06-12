@@ -7,7 +7,7 @@ using Twilio;
 
 var builder = WebApplication.CreateBuilder(args);
 
-string connection = builder.Configuration.GetConnectionString("EstroDataConnectionPostgres") ?? throw new InvalidOperationException("Connection string 'EstroDataConnectionPostgres' not found.");
+string connection = builder.Configuration.GetConnectionString("EstroDataConnectionRender") ?? throw new InvalidOperationException("Connection string 'EstroDataConnectionRender' not found.");
 
 var accountSid = builder.Configuration["Twilio:AccountSID"];
 var authToken = builder.Configuration["Twilio:AuthToken"];
