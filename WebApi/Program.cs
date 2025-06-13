@@ -43,8 +43,6 @@ builder.Services.AddCors(options =>
                           .AllowAnyMethod());
 });
 
-//builder.Services.AddCors();
-
 var app = builder.Build();
 
 app.UseCors("AllowFrontend");
