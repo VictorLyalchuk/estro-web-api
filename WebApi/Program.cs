@@ -37,8 +37,8 @@ builder.Services.AddAuthenticationWithOptions(builder.Configuration);
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocalhost5173",
-        builder => builder.WithOrigins("http://localhost:5173", "https://estro-web-api-1.onrender.com")
+    options.AddPolicy("AllowFrontend",
+        builder => builder.WithOrigins("http://localhost:5173", "https://estro-web-app.onrender.com")
                           .AllowAnyHeader()
                           .AllowAnyMethod());
 });
@@ -47,7 +47,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseCors("AllowLocalhost5173");
+app.UseCors("AllowFrontend");
 
 if (app.Environment.IsDevelopment())
 {
