@@ -45,7 +45,6 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseCors("AllowFrontend");
 
 if (app.Environment.IsDevelopment())
 {
@@ -58,6 +57,8 @@ app.UseHttpsRedirection();
 app.UseMiddleware<ErrorHandlerMiddleware>();
 
 app.UseStaticFiles();
+
+app.UseCors("AllowFrontend");
 
 app.UseAuthentication();
 
