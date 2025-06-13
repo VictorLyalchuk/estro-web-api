@@ -40,7 +40,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend",
         builder => builder.WithOrigins("http://localhost:5173", "https://estro-web-app.onrender.com")
                           .AllowAnyHeader()
-                          .AllowAnyMethod());
+                          .AllowAnyMethod()
+                          .AllowCredentials());
 });
 
 var app = builder.Build();
