@@ -59,8 +59,6 @@ app.UseMiddleware<ErrorHandlerMiddleware>();
 
 app.UseStaticFiles();
 
-app.UseCors("AllowLocalhost5173");
-
 app.UseAuthentication();
 
 app.UseAuthorization();
