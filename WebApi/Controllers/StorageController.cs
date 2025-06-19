@@ -7,10 +7,10 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StorageControllers : Controller
+    public class StorageController : Controller
     {
         private readonly IStorageService _storage;
-        public StorageControllers(IStorageService storage)
+        public StorageController(IStorageService storage)
         {
             _storage = storage;
         }

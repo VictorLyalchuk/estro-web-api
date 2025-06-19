@@ -7,10 +7,10 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CategoryControllers : Controller
+    public class CategoryController : Controller
     {
         private readonly ICategoryService _category;
-        public CategoryControllers(ICategoryService category)
+        public CategoryController(ICategoryService category)
         {
             _category = category;
         }

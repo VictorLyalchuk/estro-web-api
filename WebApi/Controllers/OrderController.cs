@@ -9,10 +9,10 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OrderControllers : Controller
+    public class OrderController : Controller
     {
         private readonly IOrderService _order;
-        public OrderControllers(IOrderService order)
+        public OrderController(IOrderService order)
         {
             _order = order;
         }

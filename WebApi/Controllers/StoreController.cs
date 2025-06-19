@@ -7,11 +7,11 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StoreControllers : Controller
+    public class StoreController : Controller
     {
         private readonly IStoreService _store;
         private readonly IAddressService _address;
-        public StoreControllers(IStoreService store, IAddressService address)
+        public StoreController(IStoreService store, IAddressService address)
         {
             _store = store;
             _address = address;
