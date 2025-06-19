@@ -8,11 +8,11 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AccountControllers : Controller
+    public class AccountController : Controller
     {
         private readonly IAccountService _accountService;
 
-        public AccountControllers(IAccountService accountService)
+        public AccountController(IAccountService accountService)
         {
             _accountService = accountService;
         }

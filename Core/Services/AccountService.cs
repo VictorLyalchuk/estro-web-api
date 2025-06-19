@@ -643,15 +643,15 @@ namespace Core.Services
 
             user.UserName = userCreateDTO.Email;
 
-            var result = await _userManager.CreateAsync(user, userCreateDTO.Password);
-            if (userCreateDTO.Role != null)
+            var result = await _userManager.CreateAsync(user, userCreateDTO.Password!);
+            //if (userCreateDTO.Role != null)
+            //{
+            //    _userManager.AddToRoleAsync(user, userCreateDTO.Role).Wait();
+            //}
+
+            if (result.Succeeded && userCreateDTO.Role != null)
             {
                 _userManager.AddToRoleAsync(user, userCreateDTO.Role).Wait();
-            }
-
-            if (result.Succeeded)
-            {
-                _userManager.AddToRoleAsync(user, "User").Wait();
             }
 
             await SendConfirmationEmailAsync(userCreateDTO.Email);
